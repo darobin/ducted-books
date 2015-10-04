@@ -12,7 +12,8 @@ Just some quick notes at this point. This is going to require:
 * `ducted-title`: takes the `h1`, sets the `title`.
 * `ducted-script-config`: loads the configuration from a `script` with `type='application/ducted+json'`.
 * `ducted-ui-panels`: handles the positioning of panels and such UI matters on the side (used by `ducted-writing-stats`)
-* `ducted-punctuation-en`: helpfully replaces '{s,t} with ’, "" with “”, ... with … (and perhaps a few others).
+* `ducted-punctuation-en`: helpfully replaces {s}'{s,t} with ’, "" with “”, ... with … (and perhaps a few others).
+* `ducted-load-document`: if given nothing it will try to use the `document`. It can also take in a `path`, a `URL`, a `content`. It will load jsdom if it needs to; using a browserify trick to only load it in Node.
 
 Throw in a little bit of browserify/watchify/babelify building and we're good to go.
 
